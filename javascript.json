@@ -1,0 +1,83 @@
+{
+  "Console log": {
+    "prefix": "con",
+    "body": [
+      "console.log('$1')"
+    ]
+  },
+  "Action creator": {
+    "prefix": "#ac",
+    "body": [
+      "const $1 = () => ({\n\ttype: $2\n})"
+    ]
+  },
+  "Thunk action": {
+    "prefix": "thunk",
+    "body": [
+      "export const $1 = () => (dispatch, getState) => {\n\tconst state = getState()\n\t$2\n}"
+    ]
+  },
+  "Test describe()": {
+    "prefix": "#desc",
+    "body": [
+      "describe('#$1', () => {\n\t$0\n})"
+    ]
+  },
+  "Test it()": {
+    "prefix": "#it",
+    "body": [
+      "it('should $1', () => {\n\t$0\n})"
+    ]
+  },
+  "Test it() async": {
+    "prefix": "#ita",
+    "body": [
+      "it('should $1', async () => {\n\t$0\n})"
+    ]
+  },
+  "React component": {
+    "prefix": "comp",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'\n",
+      "const $1 = props => (\n\t$0\n)\n",
+      "$1.propTypes = {\n}\n",
+      "export default $1"
+    ]
+  },
+  "react-redux container": {
+    "prefix": "cont",
+    "body": [
+      "import { connect } from 'react-redux'",
+      "import $1 from '../components/$1'",
+      "",
+      "const mapStateToProps = state => ({\n\t$0\n})",
+      "",
+      "const mapDispatchToProps = {}",
+      "",
+      "export default connect(mapStateToProps, mapDispatchToProps)($1)"
+    ]
+  },
+  "import PropTypes": {
+    "prefix": "iprop",
+    "body": [ "import PropTypes from 'prop-types'" ]
+  },
+  "async function": {
+    "prefix": "afunc",
+    "body": [
+      "const $1 = async ($2) => {\n\t$0\n}"
+    ]
+  },
+  "function": {
+    "prefix": "func",
+    "body": [
+      "const $1 = ($2) => {\n\t$0\n}"
+    ]
+  },
+  "const object": {
+    "prefix": "ob",
+    "body": [
+      "const $1 = {\n\t$0\n}"
+    ]
+  }
+}
